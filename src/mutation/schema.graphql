@@ -1,1 +1,15 @@
-# TODO
+#import { Mutation, Query, ChainId, TokenAmount, TradeOptions } into Uni from "w3://ens/v2.uniswap.web3api.eth"
+
+type Mutation {
+  simpleSwap(
+    chainId: Uni_ChainId!
+    tokenInAddress: String!
+    tokenOutAddress: String!
+    tokenInAmount: BigInt!
+    tradeOptions: Uni_TradeOptions!
+  ): SwapOutput!
+}
+
+type SwapOutput {
+  txHash: String!
+}

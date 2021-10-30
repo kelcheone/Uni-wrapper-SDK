@@ -1,1 +1,10 @@
-# TODO
+#import { Query, ChainId, TokenAmount } into Uni from "w3://ens/v2.uniswap.web3api.eth"
+
+type Query {
+  fetchTokenTotalSupply(
+    chainId: Uni_ChainId!
+    address: String!
+    symbol: String
+    name: String
+  ): Uni_TokenAmount!
+}
